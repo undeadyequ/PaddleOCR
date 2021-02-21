@@ -22,3 +22,10 @@ def build_model(config):
     config = copy.deepcopy(config)
     module_class = BaseModel(config)
     return module_class
+
+
+def build_model_extend(model_ext_name, config):
+    from .extend_model import JointVisDetFineGrained, JointVisDet
+    config = copy.deepcopy(config)
+    module_class = eval(model_ext_name)(args=config)
+    return module_class

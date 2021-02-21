@@ -40,7 +40,7 @@ Architecture:
     scale: 0.5
     model_name: large
   Neck:
-    name: SequenceEncoder
+    n
     encoder_type: rnn
     hidden_size: 96
   Head:
